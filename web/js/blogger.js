@@ -13,32 +13,3 @@ var response = $.getJSON(bloggerAPI).done(
     };
   }
 );
-
-
-//Experimental Picasa Code //
-
-// $(function(){
-//     var $ul = $('ul');
-//     $.ajax({
-//         dataType: 'jsonp',
-//         url: 'https://picasaweb.google.com/data/feed/api/user/takazudo/albumid/5579032834644034737',
-//         data: {
-//             alt: 'json-in-script',
-//         },
-//         jsonpCallback: 'picasaCallback',
-//         success: function(data){
-//             var photos = [];
-//             $.each(data.feed.entry, function(){
-//                 photos.push({
-//                     src: this.content.src
-//                 });
-//             });
-//             $('#template').tmpl({
-//                 photos: photos
-//             }).appendTo('#output');
-//         },
-//         error: function(){
-//             alert('failed ;(');
-//         }
-//     });
-// });
