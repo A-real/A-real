@@ -9,6 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<head>
 		<title>Adventure for Breakfast</title>
 		<link href="web/css/style.css" rel='stylesheet' type='text/css' />
+		<link href="web/css/comments.css" rel='stylesheet' type='text/css' />
 		<link href="web/css/mapstyle.css" rel='stylesheet' type='text/css' />
 		<link href="web/css/buttons.css" rel='stylesheet' type='text/css' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -166,7 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="head" id="map"> <span></span>
 					<h3>Travel Map</h3>
 					<p>Chances are you have had a great experience while travelling somewhere in the US. We want to hear about it!<br>
-					We need your help putting together the definitive list of "can't miss" stops between Howey in the Hills, FL and San Francisco, CA.<br> 
+					We need your help putting together the definitive list of "can't miss" stops between Howey in the Hills, FL and San Francisco, CA.<br>
 					You can use the form below to pin your favorite restaurant, camp ground, or scenic spot along the highway.<br>
 					Just enter the destination, tell us what you loved about that place and don't forget to sign your name!<br>
 					Our route is still a work in progress, so you may notice it change as we get more suggestions.</p>
@@ -441,15 +442,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="contact-left">
 						<div class="contact-head">
 								<span> </span>
-								<h3>Send us a note</h3>
+								<h3>Leave us a note</h3>
 						</div>
-						<form action="http://forms.brace.io/arielcmanley@gmail.com" method="POST">
+						<div id="comments">
+						</div>
+						<form id="commentForm">
 							<div class="form-left">
-								<input type="text" name="name" placeholder="Name"/>
-								<input type="text" name="_replyto" placeholder="Email"/>
+								<input type="text" name="name" placeholder="Name" id="commentSubmitter">
 							</div>
 							<div class="form-right">
-								<textarea type="text" name="comment" rows="2" cols="70" placeholder="Comment"></textarea>
+								<textarea id="commentComment" type="text" name="comment" rows="2" cols="70" placeholder="Comment"></textarea>
 							</div>
 							<div class="clear"> </div>
 							<input type="submit" value="Send Note" />
@@ -532,7 +534,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									scrollSpeed: 1200,
 									easingType: 'linear'
 						 		};
-								*/
+
 
 								$().UItoTop({ easingType: 'easeOutQuart' });
 
@@ -552,6 +554,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<!--//End-wrap-->
 	<script type='text/javascript' src='web/js/map_db.min.js'></script>
 	<script type='text/javascript' src='web/js/autocomplete.js'></script>
+	<script type='text/javascript' src='web/js/comments.js'></script>
 	<script type='text/javascript' src='web/js/directions.min.js'></script>
 	<script type='text/javascript' src='web/js/blogger.min.js'></script>
 	</body>

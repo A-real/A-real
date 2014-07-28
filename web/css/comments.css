@@ -1,0 +1,5 @@
+#comments {
+	max-height:250px;
+	overflow:scroll;
+	border:1px solid #333;
+}
